@@ -1,8 +1,9 @@
 import React from 'react';
 
 const NewsItem = (props) => {
-   
 
+
+    //setting up single news article
     let { title, description, imageUrl, newsUrl, author, date, source } = props;
     return (
         <div className='my-3'>

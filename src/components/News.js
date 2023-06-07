@@ -11,7 +11,7 @@ const News = (props) => {
   const [totalResults, setTotalResults] = useState(0)
   //  document.title = `${capitalizeFirstLetter(props.category)} - NewsJunk`;
 
-
+//capitaize first letter
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
@@ -27,8 +27,9 @@ const News = (props) => {
   // }
 
 
-
-  const updateNews = async () => {
+//setting up news articles with progress bar.. loading gif
+  
+const updateNews = async () => {
     props.setProgress(10);
     let url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
     setLoading(true);
@@ -42,6 +43,7 @@ const News = (props) => {
     props.setProgress(100);
   }
 
+  //load once when page loads
   useEffect(() => {
     updateNews();
     // eslint-disable-next-line  
@@ -74,6 +76,7 @@ const News = (props) => {
   //   setPage(page+1)
   // }
 
+  //load more data for single page
   const fetchMoreData = async () => {
 
     // console.log(page);
