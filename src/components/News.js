@@ -104,8 +104,8 @@ const updateNews = async () => {
 
         <div className='container' style={{ color: props.mode === 'light' ? 'black' : 'white' }} >
           <div className='row' >
-            {articles.map((element) => {
-              return <div className='col-md-4' key={element.url}>
+            {articles.map((element, index) => {
+              return <div className='col-md-4' key={index}>
                 <NewsItem title={element.title ? element.title.slice(0, 60) : ""} description={element.description ? element.description.slice(0, 50) : ""}
                   imageUrl={element.urlToImage ? element.urlToImage : "https://www.searchenginejournal.com/wp-content/uploads/2022/06/image-search-1600-x-840-px-62c6dc4ff1eee-sej-760x400.webp"} newsUrl={element.url}
                   author={element.author ? element.author : "Unknown Sources"}

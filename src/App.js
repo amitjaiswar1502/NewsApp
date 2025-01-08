@@ -45,6 +45,8 @@ const App = () => {
   const pageSize = 12; //setting up page size
   const apiKey = process.env.REACT_APP_NEWS_API; //storing api in environmental variable
 
+  // console.log(apiKey)
+
 
   const toggleMode = () => {
     if (mode === 'light') {
@@ -76,14 +78,14 @@ const App = () => {
           <Alert alert={alert} />
 
           <Routes>
-            <Route exact path='/' element={<News setProgress={setProgress} apiKey={apiKey} key='general' pageSize={pageSize} country='in' category='general' showAlert={showAlert} mode={mode} />}></Route>
-            <Route exact path='/general' element={<News setProgress={setProgress} apiKey={apiKey} key='general' pageSize={pageSize} country='in' category='general' showAlert={showAlert} mode={mode} />}></Route>
-            <Route exact path='/business' element={<News setProgress={setProgress} apiKey={apiKey} key='business' pageSize={pageSize} country='in' category='business' showAlert={showAlert} mode={mode} />}></Route>
-            <Route exact path='/entertainment' element={<News setProgress={setProgress} apiKey={apiKey} key='entertainment' pageSize={pageSize} country='in' category='entertainment' showAlert={showAlert} mode={mode} />}></Route>
-            <Route exact path='/health' element={<News setProgress={setProgress} apiKey={apiKey} key='health' pageSize={pageSize} country='in' category='health' showAlert={showAlert} mode={mode} />}></Route>
-            <Route exact path='/science' element={<News setProgress={setProgress} apiKey={apiKey} key='science' pageSize={pageSize} country='in' category='science' showAlert={showAlert} mode={mode} />}></Route>
-            <Route exact path='/sports' element={<News setProgress={setProgress} apiKey={apiKey} key='sports' pageSize={pageSize} country='in' category='sports' showAlert={showAlert} mode={mode} />}></Route>
-            <Route exact path='/technology' element={<News setProgress={setProgress} apiKey={apiKey} key='technology' pageSize={pageSize} country='in' category='technology' showAlert={showAlert} mode={mode} />}></Route>
+            <Route exact path='/' element={<News setProgress={setProgress} apiKey={apiKey} key='general' pageSize={pageSize} country='us' category='general' showAlert={showAlert} mode={mode} />}></Route>
+            <Route exact path='/general' element={<News setProgress={setProgress} apiKey={apiKey} key='general' pageSize={pageSize} country='us' category='general' showAlert={showAlert} mode={mode} />}></Route>
+            <Route exact path='/business' element={<News setProgress={setProgress} apiKey={apiKey} key='business' pageSize={pageSize} country='us' category='business' showAlert={showAlert} mode={mode} />}></Route>
+            <Route exact path='/entertainment' element={<News setProgress={setProgress} apiKey={apiKey} key='entertainment' pageSize={pageSize} country='us' category='entertainment' showAlert={showAlert} mode={mode} />}></Route>
+            <Route exact path='/health' element={<News setProgress={setProgress} apiKey={apiKey} key='health' pageSize={pageSize} country='us' category='health' showAlert={showAlert} mode={mode} />}></Route>
+            <Route exact path='/science' element={<News setProgress={setProgress} apiKey={apiKey} key='science' pageSize={pageSize} country='us' category='science' showAlert={showAlert} mode={mode} />}></Route>
+            <Route exact path='/sports' element={<News setProgress={setProgress} apiKey={apiKey} key='sports' pageSize={pageSize} country='us' category='sports' showAlert={showAlert} mode={mode} />}></Route>
+            <Route exact path='/technology' element={<News setProgress={setProgress} apiKey={apiKey} key='technology' pageSize={pageSize} country='us' category='technology' showAlert={showAlert} mode={mode} />}></Route>
 
           </Routes>
         </Router>
